@@ -10,4 +10,3 @@ while zero < len(my_list):
         continue
     else:
         break
-
