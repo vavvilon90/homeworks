@@ -27,7 +27,7 @@ async def inform(message):
 @dp.message_handler(commands=['start'])
 async def start_message(message):
     print('Привет! Я бот, помогающий твоему здоровью.')
-    await message.answer('Привет! Я бот, помогающий твоему здоровью. Напиши слово "Калории" и мы начнем')
+    await message.answer('Привет! Я бот, помогающий твоему здоровью. Напиши слово "Рассчитать" и мы начнем')
 
 
 class UserState(StatesGroup):
