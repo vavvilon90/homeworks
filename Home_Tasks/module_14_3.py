@@ -31,7 +31,7 @@ button3 = KeyboardButton(text='Купить')
 kb.add(button)
 kb.add(button2)
 kb.add(button3)
-kb.resize_keyboard
+
 
 class UserState(StatesGroup):
     age = State()
@@ -93,10 +93,12 @@ async def start_message(message):
 
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
+
     for i in range(1, 5):
         await message.answer(f'Название: Product{i} | Описание: описание {i} | Цена: {i*100}',
                                    reply_markup=button3)
-        await message.answer_photo((f'files/1.jpg'))
+        with open(f'files/{i}.jpg', 'rb') as photo:
+            await message.answer_photo(photo)
     await message.answer('Выберите продукт для покупки', reply_markup=product_inline)
 
 @dp.callback_query_handler(text='product_buying')
