@@ -6,8 +6,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardBut
 import asyncio
 
 import crud_functions
-from crud_functions import *
-
 
 api = ''
 bot = Bot(token=api)
