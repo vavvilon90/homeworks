@@ -9,7 +9,7 @@ import crud_functions
 from crud_functions import *
 
 
-api = '7972756373:AAHFkd39nyRwmoNb0aZFXQRYZFlP37UhOII'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
